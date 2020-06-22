@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cliente{% endblock %}
+
+{% block body %}
+<div class="row justify-content-md-center">
+<div class="col-6">
+    <h1>Cliente index</h1>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cliente.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ cliente.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Apellido</th>
+                <td>{{ cliente.apellido }}</td>
+            </tr>
+            <tr>
+                <th>Ci</th>
+                <td>{{ cliente.ci }}</td>
+            </tr>
+            <a class="btn btn-info mr-2" href="{{ path('cliente_index') }}">Ver Clientes</a>
+            <a class="btn btn-warning mr-2" href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
+            {{ include('cliente/_delete_form.html.twig') }}
+
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+{% endblock %}
