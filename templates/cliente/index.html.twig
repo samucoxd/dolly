@@ -26,7 +26,7 @@
                 <td>{{ cliente.ci }}</td>
                 <td>
                     <a class="btn btn-success" href="{{ path('cliente_show', {'id': cliente.id}) }}">Ver</a>
-                    <a class="btn btn-primary" href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
+                    <a class="btn btn-warning" href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}

@@ -48,7 +48,7 @@
           {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <p>
               Bievenido: {{ app.user.nombre }}<a class="nav-link active"
-                href="logout">
+                href="{{ path('app_logout') }}">
                 logout
               </a>
             </p>
