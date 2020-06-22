@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Producto{% endblock %}
+
+{% block body %}
+
+     <div class="row justify-content-md-center">
+     <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+     <div class="card-header">producto</div>
+     <div class="card-body">
+    
+
+    {{ include('producto/_form.html.twig', {'button_label': 'Editar'}) }}
+     <hr>
+    <div class="navbar mt-3">
+    {{ include('producto/_delete_form.html.twig') }}
+     <a class="btn btn-warning ml-4" href="{{ path('producto_index') }}">Ver Producto</a>
+    </div>
+     </div>
+</div>
+</div>
+{% endblock %}

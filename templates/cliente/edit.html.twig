@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Cliente{% endblock %}
+
+{% block body %}
+<div class="row justify-content-md-center">
+  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Cliente</div>
+  <div class="card-body">
+
+    {{ include('cliente/_form.html.twig', {'button_label': 'Editar'}) }}
+    <hr>
+    <div class="navbar mt-3">
+        {{ include('cliente/_delete_form.html.twig') }}
+    <a class="btn btn-warning ml-4" href="{{ path('cliente_index') }}">Ver Clientes</a>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

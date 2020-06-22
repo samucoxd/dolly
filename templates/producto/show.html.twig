@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Producto{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-md-center">
+    <div class="col-6">
+    <h1>Producto</h1>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ producto.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ producto.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Sabor</th>
+                <td>{{ producto.sabor }}</td>
+            </tr>
+            <tr>
+                <th>Relleno</th>
+                <td>{{ producto.relleno }}</td>
+            </tr>
+
+    <a class="btn btn-info mr-2" href="{{ path('producto_index') }}">Ver Producto</a>
+
+    <a class="btn btn-warning mr-2" href="{{ path('producto_edit', {'id': producto.id}) }}">Editar</a>
+
+    {{ include('producto/_delete_form.html.twig') }}
+    </tbody>
+    </table>
+</div>
+</div>
+{% endblock %}

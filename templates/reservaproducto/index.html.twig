@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reservaproducto index{% endblock %}
+
+{% block body %}
+    <h1>Reservaproducto index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fechaentrega</th>
+                <th>Obs</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reservaproducto in reservaproductos %}
+            <tr>
+                <td>{{ reservaproducto.id }}</td>
+                <td>{{ reservaproducto.fechaentrega ? reservaproducto.fechaentrega|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ reservaproducto.obs }}</td>
+                <td>
+                    <a href="{{ path('reservaproducto_show', {'id': reservaproducto.id}) }}">show</a>
+                    <a href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('reservaproducto_new') }}">Create new</a>
+{% endblock %}
