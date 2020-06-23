@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cliente index{% endblock %}
+
+{% block body %}
+<div class="row justify-content-md-center">
+<div class="col-6">
+    <h1>Cliente index</h1>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Ci</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente.id }}</td>
+                <td>{{ cliente.nombre }}</td>
+                <td>{{ cliente.apellido }}</td>
+                <td>{{ cliente.ci }}</td>
+                <td>
+                    <a class="btn btn-success" href="{{ path('cliente_show', {'id': cliente.id}) }}">Ver</a>
+                    <a class="btn btn-primary" href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        <a class="btn btn-info btn-block" href="{{ path('cliente_new') }}">Crear Nuevo</a>
+        </tbody>
+    </table>
+</div>
+</div>
+{% endblock %}
