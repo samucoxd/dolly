@@ -16,8 +16,8 @@
     {% endblock %}
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand" href="{{ path('dashboard') }}">
+    <nav class="navbar fixed-top navbar-light bg-light ">
+      <a class="navbar-brand " href="{{ path('dashboard') }}">
         <img src="{{ asset('imagenes/img.png') }}"
           width="240"
           height="70"
@@ -26,10 +26,10 @@
       </a>
       <ul class="nav nav-pills" style="margin-right: 19%;">
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('dashboard') }}">Inicio</a>
+          <a class="nav-link " href="{{ path('dashboard') }}">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('cliente_index') }}">Cliente</a>
+          <a class="nav-link " href="{{ path('cliente_index') }}">Cliente</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ path('producto_index') }}">Productos</a>
@@ -53,7 +53,7 @@
               </a>
             </p>
           {% else %}
-            <a class="nav-link active" href={{path('app_login')}}>LOGIN</a>
+            <a class="nav-link btn btn-outline-primary" href={{path('app_login')}}>LOGIN</a>
           {% endif %}
         </li>
       </ul>
@@ -62,7 +62,7 @@
     {% block body %}
 
     {% endblock %}
-    <br /><br />
+    <br /><br /><br />
     <div class="jumbotron mt-5 fernando">
       <div class="container">
         <div class="row">
@@ -72,7 +72,7 @@
                 <div class="sp-module-content">
                   <div class="fer2">
                     <p>
-                    <p><img src="imagenes/img0.png" width="230px" height="140px" alt=""></p>
+                    <p><img src="{{asset('imagenes/img0.png')}}" width="230px" height="140px" alt=""></p>
                       <span class="uk-text-contrast">
                         Dolly Gómez se inició en el negocio de las tortas, dando sus primeros pasos con la torta del 1er. cumpleaños de su primer hijo en el año 1974.
                       </span>
