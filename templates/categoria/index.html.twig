@@ -3,9 +3,13 @@
 {% block title %}Categoria index{% endblock %}
 
 {% block body %}
-    <h1>Categoria index</h1>
+
+<div class="row justify-content-md-center">
+<div class="col-6">
+  <h1>Categoria index</h1>
 
     <table class="table">
+    <thead class="thead-dark">
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,17 +23,21 @@
                 <td>{{ categorium.id }}</td>
                 <td>{{ categorium.nombre }}</td>
                 <td>
-                    <a href="{{ path('categoria_show', {'id': categorium.id}) }}">show</a>
-                    <a href="{{ path('categoria_edit', {'id': categorium.id}) }}">edit</a>
+                    <a class="btn btn-success" href="{{ path('categoria_show', {'id': categorium.id}) }}">Ver</a>
+                    <a class="btn btn-primary"href="{{ path('categoria_edit', {'id': categorium.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="5">no records found</td>
             </tr>
         {% endfor %}
+        <a class="btn btn-info btn-block" href="{{ path('categoria_new') }}">Crear Nuevo</a>
+
         </tbody>
     </table>
 
-    <a href="{{ path('categoria_new') }}">Create new</a>
+</div>
+</div>
+    
 {% endblock %}

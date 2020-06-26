@@ -7,11 +7,9 @@
 {% block body %}
     <h1>Create new Reserva</h1>
 
-<<<<<<< HEAD
     {{ include('reserva/_form.html.twig') }}
 
     <a href="{{ path('reserva_index') }}">back to list</a>
-=======
     <div class="row justify-content-md-center">
   <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
   <div class="card-header">Reserva</div>
@@ -23,5 +21,7 @@
     </div>
 </div>
 </div>
->>>>>>> 4f59f48ebe77d8ff43f43bdc4a16173613e916d9
+    {{ include('reserva/_form.html.twig') }}
+
+    <a href="{{ path('reserva_index') }}">back to list</a>
 {% endblock %}

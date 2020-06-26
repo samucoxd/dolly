@@ -3,9 +3,12 @@
 {% block title %}Producto index{% endblock %}
 
 {% block body %}
+     <div class="row justify-content-md-center">
+     <div class="col-6">
     <h1>Producto index</h1>
 
     <table class="table">
+    <thead class="thead-dark">
         <thead>
             <tr>
                 <th>Id</th>
@@ -23,8 +26,9 @@
                 <td>{{ producto.sabor }}</td>
                 <td>{{ producto.relleno }}</td>
                 <td>
-                    <a href="{{ path('producto_show', {'id': producto.id}) }}">show</a>
-                    <a href="{{ path('producto_edit', {'id': producto.id}) }}">edit</a>
+                    <a class="btn btn-success" href="{{ path('producto_show', {'id': producto.id}) }}">Ver</a>
+                    <a class="btn btn-primary" href="{{ path('producto_edit', {'id': producto.id}) }}">Editar</a>
+
                 </td>
             </tr>
         {% else %}
@@ -32,8 +36,11 @@
                 <td colspan="5">no records found</td>
             </tr>
         {% endfor %}
+         <a class="btn btn-info btn-block" href="{{ path('producto_new') }}">Crear Nuevo</a>
+        
         </tbody>
     </table>
 
-    <a href="{{ path('producto_new') }}">Create new</a>
+</div>
+</div>
 {% endblock %}

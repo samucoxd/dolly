@@ -7,11 +7,9 @@
 {% block body %}
     <h1>Create new User</h1>
 
-<<<<<<< HEAD
     {{ include('user/_form.html.twig') }}
 
     <a href="{{ path('user_index') }}">back to list</a>
-=======
     <div class="row justify-content-md-center">
   <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
   <div class="card-header">Usuario</div>
@@ -22,5 +20,7 @@
     </div>
 </div>
 </div>
->>>>>>> 4f59f48ebe77d8ff43f43bdc4a16173613e916d9
+    {{ include('user/_form.html.twig') }}
+
+    <a href="{{ path('user_index') }}">back to list</a>
 {% endblock %}

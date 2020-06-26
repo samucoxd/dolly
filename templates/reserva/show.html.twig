@@ -17,7 +17,6 @@
                 <th>Fecha</th>
                 <td>{{ reserva.fecha ? reserva.fecha|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
-<<<<<<< HEAD
         </tbody>
     </table>
 
@@ -26,19 +25,4 @@
     <a href="{{ path('reserva_edit', {'id': reserva.id}) }}">edit</a>
 
     {{ include('reserva/_delete_form.html.twig') }}
-=======
-
-        <a class="btn btn-info mr-2" href="{{ path('reserva_index') }}">back to list</a>
-
-        <a class="btn btn-warning mr-2" href="{{ path('reserva_edit', {'id': reserva.id}) }}">edit</a>
-        {{ include('reserva/_delete_form.html.twig') }}
-
-        </tbody>
-    </table>
-
-    </div>
-</div>
-
-    
->>>>>>> 4f59f48ebe77d8ff43f43bdc4a16173613e916d9
 {% endblock %}
