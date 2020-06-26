@@ -1,11 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Reserva{% endblock %}
+{% block title %}
+{{parent()}}New Reserva
+{% endblock %}
 
 {% block body %}
     <h1>Create new Reserva</h1>
 
+<<<<<<< HEAD
     {{ include('reserva/_form.html.twig') }}
 
     <a href="{{ path('reserva_index') }}">back to list</a>
+=======
+    <div class="row justify-content-md-center">
+  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Reserva</div>
+  <div class="card-body">
+
+    {{ include('reserva/_form.html.twig') }}
+
+    <a class="btn btn-success btn-warning btn-block mt-4" href="{{ path('reserva_index') }}">Ver Reserva</a>
+    </div>
+</div>
+</div>
+>>>>>>> 4f59f48ebe77d8ff43f43bdc4a16173613e916d9
 {% endblock %}

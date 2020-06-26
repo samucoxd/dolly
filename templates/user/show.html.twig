@@ -3,7 +3,9 @@
 {% block title %}User{% endblock %}
 
 {% block body %}
-    <h1>User</h1>
+<div class="row justify-content-md-center">
+<div class="col-6">
+    <h1>User index</h1>
 
     <table class="table">
         <tbody>
@@ -23,6 +25,7 @@
                 <th>Password</th>
                 <td>{{ user.password }}</td>
             </tr>
+<<<<<<< HEAD
         </tbody>
     </table>
 
@@ -31,4 +34,14 @@
     <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
 
     {{ include('user/_delete_form.html.twig') }}
+=======
+
+            <a class="btn btn-info mr-2" href="{{ path('user_index') }}">Ver Usuario</a>
+            <a class="btn btn-warning mr-2" href="{{ path('user_edit', {'id': user.id}) }}">Editar</a>
+            {{ include('user/_delete_form.html.twig') }}
+        </tbody>
+    </table>
+</div> 
+</div> 
+>>>>>>> 4f59f48ebe77d8ff43f43bdc4a16173613e916d9
 {% endblock %}

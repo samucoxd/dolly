@@ -3,10 +3,12 @@
 {% block title %}User index{% endblock %}
 
 {% block body %}
+<div class="row justify-content-md-center">
+<div class="col-6">
     <h1>User index</h1>
 
-    <table class="table">
-        <thead>
+    <table class="table table-responsive">
+      <thead class="thead-dark">       
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
@@ -23,19 +25,27 @@
                 <td>{{ user.nombre }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-                <td>{{ user.password }}</td>
+                <td width="200">{{ user.password }}</td>
+
                 <td>
-                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                    <a class="btn btn-success" href="{{ path('user_show', {'id': user.id}) }}">Ver</a>
+                    <a class="btn btn-primary" href="{{ path('user_edit', {'id': user.id}) }}">Editar</a>
                 </td>
+                
             </tr>
+
+
+
         {% else %}
             <tr>
                 <td colspan="5">no records found</td>
             </tr>
+            
         {% endfor %}
+        <a class="btn btn-info btn-block" href="{{ path('user_new') }}">Crear Nuevo</a>
         </tbody>
     </table>
-
-    <a href="{{ path('user_new') }}">Create new</a>
+</div>
+</div>
+    
 {% endblock %}

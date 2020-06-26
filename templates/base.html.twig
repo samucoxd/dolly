@@ -16,8 +16,8 @@
     {% endblock %}
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand" href="{{ path('dashboard') }}">
+    <nav class="navbar fixed-top navbar-light bg-light ">
+      <a class="navbar-brand " href="{{ path('dashboard') }}">
         <img src="{{ asset('imagenes/img.png') }}"
           width="240"
           height="70"
@@ -26,10 +26,10 @@
       </a>
       <ul class="nav nav-pills" style="margin-right: 19%;">
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('dashboard') }}">Inicio</a>
+          <a class="nav-link " href="{{ path('dashboard') }}">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('cliente_index') }}">Cliente</a>
+          <a class="nav-link " href="{{ path('cliente_index') }}">Cliente</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ path('producto_index') }}">Productos</a>
@@ -48,12 +48,12 @@
           {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <p>
               Bievenido: {{ app.user.nombre }}<a class="nav-link active"
-                href="{{ path('app_logout') }}">
+                href="{{path('app_logout')}}">
                 logout
               </a>
             </p>
           {% else %}
-            <a class="nav-link active" href="{{ path('app_login') }}">LOGIN</a>
+            <a class="nav-link btn btn-outline-primary" href={{path('app_login')}}>LOGIN</a>
           {% endif %}
         </li>
       </ul>
@@ -62,7 +62,7 @@
     {% block body %}
 
     {% endblock %}
-    <br /><br />
+    <br /><br /><br />
     <div class="jumbotron mt-5 fernando">
       <div class="container">
         <div class="row">
@@ -72,9 +72,9 @@
                 <div class="sp-module-content">
                   <div class="fer2">
                     <p>
+                    <p><img src="{{asset('imagenes/img0.png')}}" width="230px" height="140px" alt=""></p>
                       <span class="uk-text-contrast">
-                        y Autonomías Indígena Originario Campesinas del
-                        Departamento de Santa Cruz.
+                        Dolly Gómez se inició en el negocio de las tortas, dando sus primeros pasos con la torta del 1er. cumpleaños de su primer hijo en el año 1974.
                       </span>
                     </p>
                   </div>
@@ -96,28 +96,28 @@
                       <li>
                         <a style="color: #B0B0B0;"
                           target="_blank"
-                          href="http://www.gmsantacruz.gob.bo/">
+                          href="https://tortasdolly.com/">
                           Tortas Dolly
                         </a>
                       </li>
                       <li>
                         <a style="color: #B0B0B0;"
                           target="_blank"
-                          href="http://www.santacruz.gob.bo/">
+                          href="https://es-la.facebook.com/DUMBOSANTACRUZ/">
                           Heladeria Dumbo
                         </a>
                       </li>
                       <li>
                         <a style="color: #B0B0B0;"
                           target="_blank"
-                          href="https://www.comiteprosantacruz.org.bo/">
-                          Tortas don Gordo
+                          href="https://tortasdelgordo.com.co/">
+                          Tortas del Gordo
                         </a>
                       </li>
                       <li>
                         <a style="color: #B0B0B0;"
                           target="_blank"
-                          href="https://www.mintrabajo.gob.bo/index.php/santa-cruz.html">
+                          href="https://www.pedidosya.com.bo/restaurantes/santa-cruz-de-la-sierra/pizza-rio---doble-via-la-guardia-menu?gclid=CjwKCAjwrcH3BRApEiwAxjdPTQIkDG7Z9cjtSijAssVdsSDZCSd59s_cwYD8tUtEZpg5n3VoMrc7mhoC_98QAvD_BwE">
                           Pizza rio
                         </a>
                       </li>
@@ -166,7 +166,7 @@
                           height="40" />
                       </a> &nbsp;&nbsp;
                       <a href="tel:+5913363297">
-                        <img src="{{ asset('imagenes/Imagen2.png') }}"
+                        <img src="{{ asset('imagenes/img8.jpg') }}"
                           width="45"
                           height="45" />
                       </a>
