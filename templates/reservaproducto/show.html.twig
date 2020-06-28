@@ -3,8 +3,9 @@
 {% block title %}Reservaproducto{% endblock %}
 
 {% block body %}
-    <h1>Reservaproducto</h1>
-
+    <div class="row justify-content-md-center">
+    <div class="col-6">
+    <h1>Detalle Reserva</h1>
     <table class="table">
         <tbody>
             <tr>
@@ -19,12 +20,15 @@
                 <th>Obs</th>
                 <td>{{ reservaproducto.obs }}</td>
             </tr>
-        </tbody>
-    </table>
 
-    <a href="{{ path('reservaproducto_index') }}">back to list</a>
 
-    <a href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">edit</a>
+    <a class="btn btn-info mr-2" href="{{ path('reservaproducto_index') }}">Volver a la Lista</a>
+
+    <a class="btn btn-warning mr-2" href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">edit</a>
 
     {{ include('reservaproducto/_delete_form.html.twig') }}
+            </tbody>
+    </table>
+</div>
+</div>
 {% endblock %}

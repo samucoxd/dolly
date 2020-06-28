@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Reserva;
+use App\Entity\Reservaproducto;
+use App\Form\ReservaproductoType;
 use App\Form\ReservaType;
 use App\Repository\ReservaRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -39,7 +41,16 @@ class ReservaController extends AbstractController
             $entityManager->persist($reserva);
             $entityManager->flush();
 
-            return $this->redirectToRoute('reserva_index');
+            //return $this->redirectToRoute('reserva_index');
+            $reservaproducto = new Reservaproducto();
+            $form = $this->createForm(ReservaproductoType::class, $reservaproducto);
+            $form->handleRequest($request);
+            
+            return $this->render('reservaproducto/new.html.twig', [
+                'reservaproducto' => $reservaproducto,
+                'form' => $form->createView(),
+                'reserva' => $reserva->getId(),
+            ]);
         }
 
         return $this->render('reserva/new.html.twig', [

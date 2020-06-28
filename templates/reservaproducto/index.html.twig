@@ -3,13 +3,21 @@
 {% block title %}Reservaproducto index{% endblock %}
 
 {% block body %}
+
+<div class="row justify-content-md-center">
+<div class="col-6">
+
     <h1>Reservaproducto index</h1>
 
     <table class="table">
+        <thead class="thead-dark">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Fechaentrega</th>
+                <th>Reserva</th>
+                <th>Fecha Reserva</th>
+                <th>Fecha Entrega</th>
+                <th>Producto</th>
                 <th>Obs</th>
                 <th>actions</th>
             </tr>
@@ -18,11 +26,14 @@
         {% for reservaproducto in reservaproductos %}
             <tr>
                 <td>{{ reservaproducto.id }}</td>
+                <td>{{ reservaproducto.reserva.id }}</td>
+                <td>{{ reservaproducto.reserva.fecha ? reservaproducto.reserva.fecha|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ reservaproducto.fechaentrega ? reservaproducto.fechaentrega|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ reservaproducto.producto.nombre }}</td>
                 <td>{{ reservaproducto.obs }}</td>
                 <td>
-                    <a href="{{ path('reservaproducto_show', {'id': reservaproducto.id}) }}">show</a>
-                    <a href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">edit</a>
+                    <a class="btn btn-success" href="{{ path('reservaproducto_show', {'id': reservaproducto.id}) }}">show</a>
+                    <a class="btn btn-primary" href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -30,8 +41,11 @@
                 <td colspan="4">no records found</td>
             </tr>
         {% endfor %}
+         <a class="btn btn-info btn-block" href="{{ path('reservaproducto_new') }}">Create new</a>
+
         </tbody>
     </table>
-
-    <a href="{{ path('reservaproducto_new') }}">Create new</a>
+</div>
+</div>
+    
 {% endblock %}

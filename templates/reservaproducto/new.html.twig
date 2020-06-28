@@ -3,9 +3,14 @@
 {% block title %}New Reservaproducto{% endblock %}
 
 {% block body %}
-    <h1>Create new Reservaproducto</h1>
-
-    {{ include('reservaproducto/_form.html.twig') }}
-
-    <a href="{{ path('reservaproducto_index') }}">back to list</a>
+<h1>Create new Reservaproducto</h1>
+<div class="row justify-content-md-center">
+  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Detalle Reserva</div>
+        <div class="card-body">
+            {{ include('reservaproducto/_form.html.twig') }}
+            <a class="btn btn-warning" href="{{ path('reservaproducto_index') }}">Ver Detalles</a>
+      </div>
+    </div>
+  </div>
 {% endblock %}

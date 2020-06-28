@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Repository\ReservaproductoRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**

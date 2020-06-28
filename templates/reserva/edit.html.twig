@@ -5,19 +5,16 @@
 {% block body %}
 <div class="row justify-content-md-center">
   <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Reserva</div>
-  <div class="card-body">
-   
-    {{ include('reserva/_form.html.twig', {'button_label': 'Update'}) }}
-    <hr>
-  <div class="navbar mt-3">
-   {{ include('reserva/_delete_form.html.twig') }}
-    <a class="btn btn-warning ml-4" href="{{ path('reserva_index') }}">Ver Reserva</a>
- </div>
-
-
+    <div class="card-header">Reserva</div>
+    <div class="card-body">
+      {{ include('reserva/_form.html.twig', {'button_label': 'Update'}) }}
+      <hr>
+      <div class="navbar mt-3">
+        {{ include('reserva/_delete_form.html.twig') }}
+        <a class="btn btn-warning ml-4" href="{{ path('reserva_index') }}">Ver Reserva</a>
+      </div>
+    </div>
   </div>
-</div>
 </div>
    
 {% endblock %}

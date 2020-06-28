@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=ProductoRepository::class)
+ * 
  */
 class Producto
 {
@@ -44,7 +45,8 @@ class Producto
      * @ORM\OneToMany(targetEntity=Reservaproducto::class, mappedBy="producto", orphanRemoval=true)
      */
     private $reservaproductos;
-
+    
+     
     public function __construct()
     {
         $this->reservaproductos = new ArrayCollection();
@@ -133,4 +135,21 @@ class Producto
 
         return $this;
     }
+     /**
+     * @ORM\Column(type="string")
+     */
+    private $fotoFilename;
+
+    public function getfotoFilename()
+    {
+        return $this->fotoFilename;
+    }
+
+    public function setfotoFilename($fotoFilename)
+    {
+        $this->fotoFilename = $fotoFilename;
+
+        return $this;
+    }
 }
+
