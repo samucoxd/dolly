@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Reservaproducto index{% endblock %}
+{% block title %}Listado de Detalle Reserva{% endblock %}
 
 {% block body %}
 
 <div class="row justify-content-md-center">
 <div class="col-6">
 
-    <h1>Reservaproducto index</h1>
+    <h1>Listado de Detalle Reserva</h1>
 
     <table class="table">
         <thead class="thead-dark">
@@ -32,8 +32,8 @@
                 <td>{{ reservaproducto.producto.nombre }}</td>
                 <td>{{ reservaproducto.obs }}</td>
                 <td>
-                    <a class="btn btn-success" href="{{ path('reservaproducto_show', {'id': reservaproducto.id}) }}">show</a>
-                    <a class="btn btn-primary" href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">edit</a>
+                    <a class="btn btn-success" href="{{ path('reservaproducto_show', {'id': reservaproducto.id}) }}">Ver Detalle</a>
+                    <a class="btn btn-primary" href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
@@ -41,7 +41,7 @@
                 <td colspan="4">no records found</td>
             </tr>
         {% endfor %}
-         <a class="btn btn-info btn-block" href="{{ path('reservaproducto_new') }}">Create new</a>
+         <a class="btn btn-info btn-block" href="{{ path('reservaproducto_new') }}">Crear Nuevo</a>
 
         </tbody>
     </table>

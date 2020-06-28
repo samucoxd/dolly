@@ -35,5 +35,10 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/cliente, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/producto, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/categoria, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/reserva, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/reservaproducto, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/user, roles: [ROLE_ADMIN, ROLE_USER] }
         # - { path: ^/profile, roles: ROLE_USER }

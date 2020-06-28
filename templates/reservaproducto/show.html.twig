@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Reservaproducto{% endblock %}
+{% block title %}Detalle Reserva{% endblock %}
 
 {% block body %}
     <div class="row justify-content-md-center">
@@ -24,7 +24,7 @@
 
     <a class="btn btn-info mr-2" href="{{ path('reservaproducto_index') }}">Volver a la Lista</a>
 
-    <a class="btn btn-warning mr-2" href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">edit</a>
+    <a class="btn btn-warning mr-2" href="{{ path('reservaproducto_edit', {'id': reservaproducto.id}) }}">Editar</a>
 
     {{ include('reservaproducto/_delete_form.html.twig') }}
             </tbody>
