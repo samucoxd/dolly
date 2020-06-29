@@ -18,8 +18,12 @@
   <body>
 
  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
  <a class="navbar-brand" href="{{ path('dashboard') }}">
-    <img src="{{ asset('imagenes/img.png') }}" width="90" height="30" alt="" loading="lazy">
+    <img src="{{ asset('imagenes/img.png') }}" width="150" height="30" alt="" loading="lazy">
   </a>
 <div class="navbar-nav ml-auto">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -66,7 +70,7 @@
     </ul>
   </div>
 </div>
-
+</div>
 </nav>
     {% block body %}
 

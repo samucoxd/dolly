@@ -40,5 +40,4 @@ security:
         - { path: ^/categoria, roles: [ROLE_ADMIN, ROLE_USER] }
         - { path: ^/reserva, roles: [ROLE_ADMIN, ROLE_USER] }
         - { path: ^/reservaproducto, roles: [ROLE_ADMIN, ROLE_USER] }
-        - { path: ^/user, roles: [ROLE_ADMIN, ROLE_USER] }
         # - { path: ^/profile, roles: ROLE_USER }
